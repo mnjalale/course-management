@@ -1,6 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
+import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.render(<App />, document.getElementById("root")); // eslint-disable-line
+import "./index.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import App from "./components/App";
+
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById("app") // eslint-disable-line
+);
