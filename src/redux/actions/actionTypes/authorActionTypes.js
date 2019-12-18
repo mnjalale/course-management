@@ -1,0 +1,5 @@
+const LOAD_AUTHOR_SUCCESS = "LOAD_AUTHOR_SUCCESS";
+
+export default {
+  LOAD_AUTHOR_SUCCESS
+};
