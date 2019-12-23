@@ -8,10 +8,10 @@ const author = PropTypes.shape({
 const authors = PropTypes.arrayOf(author);
 
 const course = PropTypes.shape({
-  id: PropTypes.number.isRequired,
+  id: PropTypes.number,
   title: PropTypes.string.isRequired,
-  slug: PropTypes.string.isRequired,
-  authorId: PropTypes.number.isRequired,
+  slug: PropTypes.string,
+  authorId: PropTypes.number,
   category: PropTypes.string.isRequired
 });
 
