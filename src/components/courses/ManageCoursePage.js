@@ -22,7 +22,7 @@ const initialError = {
   title: ""
 };
 
-const ManageCoursePage = props => {
+export const ManageCoursePage = props => {
   const {
     authors,
     course: initialCourse,

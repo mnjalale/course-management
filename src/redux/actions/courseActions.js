@@ -22,14 +22,14 @@ export const loadCourses = () => {
   };
 };
 
-const createCourseSuccess = course => {
+export const createCourseSuccess = course => {
   return {
     type: courseActionTypes.CREATE_COURSE_SUCCESS,
     course
   };
 };
 
-const updateCourseSuccess = course => {
+export const updateCourseSuccess = course => {
   return {
     type: courseActionTypes.UPDATE_COURSE_SUCCESS,
     course
