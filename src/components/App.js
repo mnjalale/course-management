@@ -10,6 +10,8 @@ import Header from "./common/Header";
 import PageNotFound from "./PageNotFound";
 import CoursesPage from "./courses/CoursesPage";
 import ManageCoursePage from "./courses/ManageCoursePage";
+import AuthorsPage from "./authors/AuthorsPage";
+import ManageAuthorPage from "./authors/ManageAuthorPage";
 
 const App = () => {
   return (
@@ -18,6 +20,9 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/about" component={AboutPage} />
+        <Route path="/authors" component={AuthorsPage} />
+        <Route path="/author/:id" component={ManageAuthorPage} />
+        <Route path="/author" component={ManageAuthorPage} />
         <Route path="/courses" component={CoursesPage} />
         <Route path="/course/:slug" component={ManageCoursePage} />
         <Route path="/course" component={ManageCoursePage} />

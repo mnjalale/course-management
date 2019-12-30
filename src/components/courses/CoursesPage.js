@@ -9,9 +9,12 @@ import * as authorActions from "../../redux/actions/authorActions";
 import * as courseActions from "../../redux/actions/courseActions";
 import CourseList from "./CourseList";
 import Spinner from "../common/Spinner";
+import Pagination from "../common/Pagination";
 
 const CoursesPage = props => {
   const [redirectToAddCoursePage, setRedirectToAddCoursePage] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [coursesPerPage, setCoursesPerPage] = useState(10);
   const {
     authors,
     courses,
@@ -40,6 +43,15 @@ const CoursesPage = props => {
     }
   };
 
+  const paginate = pageNumber => {
+    setCurrentPage(pageNumber);
+  };
+
+  // Get current posts
+  const indexOfLastCourse = currentPage * coursesPerPage;
+  const indexOfFirstCourse = indexOfLastCourse - coursesPerPage;
+  const currentCourses = courses.slice(indexOfFirstCourse, indexOfLastCourse);
+
   return (
     <>
       {redirectToAddCoursePage && <Redirect to="/course" />}
@@ -57,7 +69,15 @@ const CoursesPage = props => {
           >
             Add Course
           </button>
-          <CourseList courses={courses} onDeleteClick={handleDeleteCourse} />
+          <CourseList
+            courses={currentCourses}
+            onDeleteClick={handleDeleteCourse}
+          />
+          <Pagination
+            paginate={paginate}
+            recordsPerPage={coursesPerPage}
+            totalRecords={courses.length}
+          />
         </>
       )}
     </>

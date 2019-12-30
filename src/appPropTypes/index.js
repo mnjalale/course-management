@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const author = PropTypes.shape({
-  id: PropTypes.number.isRequired,
+  id: PropTypes.number,
   name: PropTypes.string.isRequired
 });
 

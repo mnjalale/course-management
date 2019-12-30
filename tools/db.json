@@ -69,6 +69,38 @@
       "slug": "web-components-shadow-dom",
       "authorId": 1,
       "category": "HTML5"
+    },
+    {
+      "id": 11,
+      "title": "Title 1",
+      "authorId": 2,
+      "category": "Category 1",
+      "createdAt": 1577631393110,
+      "slug": "title-1"
+    },
+    {
+      "id": 12,
+      "title": "Title 2",
+      "authorId": 2,
+      "category": "Category 2",
+      "createdAt": 1577631617474,
+      "slug": "title-2"
+    },
+    {
+      "id": 13,
+      "title": "Course 3",
+      "authorId": 2,
+      "category": "Category 3",
+      "createdAt": 1577638712572,
+      "slug": "course-3"
+    },
+    {
+      "id": 14,
+      "title": "A First Course",
+      "authorId": 4,
+      "category": "A First Category",
+      "createdAt": 1577705590069,
+      "slug": "a-first-course"
     }
   ],
   "authors": [
@@ -82,7 +114,13 @@
     },
     {
       "id": 3,
-      "name": "Dan Wahlin"
+      "name": "Martin Njalale",
+      "createdAt": 1577702907350
+    },
+    {
+      "id": 4,
+      "name": "Michael Wasilwas",
+      "createdAt": 1577703021724
     }
   ]
 }
