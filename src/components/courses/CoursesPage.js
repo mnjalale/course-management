@@ -14,7 +14,7 @@ import Pagination from "../common/Pagination";
 const CoursesPage = props => {
   const [redirectToAddCoursePage, setRedirectToAddCoursePage] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [coursesPerPage, setCoursesPerPage] = useState(10);
+  const [coursesPerPage, setCoursesPerPage] = useState(5);
   const {
     authors,
     courses,
